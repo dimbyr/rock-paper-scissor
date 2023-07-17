@@ -17,18 +17,23 @@ function getPlayerChoice(){
 // Important note: you want to return the results of this function call, not console.log() them. You’re going to use what you return later on, so let’s test this function by using console.log to see the results:
 
 function playRound(playerSelection, computerSelection) {
-    console.log(playerSelection, computerSelection);
-    if(playerSelection.toLowerCase() == computerSelection.toLowerCase()){
-      console.log('Youu both loose');
-      return "It is a draw";
+    let wins = ['paperrock', 'rockscissors', 'scissorspaper'];
+    // let losses = ['paperscissors','scissorsrock', 'rockpaper'];
+    let player = playerSelection.toLowerCase() ;
+    let computer = computerSelection.toLowerCase();
+    if(player == computer){
+      return `It is a draw: ${playerSelection} and ${computerSelection}`;
     }
-    else {
-      console.log('One of you win');
-      return "One of you win";
-    }
-  }
+    else if (wins.includes(player+computer) ) {
+        // player wins
+        return `You win! ${player.toUpperCase()} beats ${computer.toUpperCase()}`;
+       } else {
+        // player looses
+        return `You loose! ${computer.toUpperCase()} beats ${player.toUpperCase()}`;
+       }
+    };
 
-playRound(getPlayerChoice(), getComputerChoice());
+console.log(playRound(getPlayerChoice(), getComputerChoice()));
 
 // const playerSelection = "rock";
 // const computerSelection = getComputerChoice();
