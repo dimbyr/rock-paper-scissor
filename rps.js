@@ -7,7 +7,7 @@ function getComputerChoice(){
 // Request an input from player.
 function getPlayerChoice(){
     let playerChoice = 'blabla';
-    let availableChoices = ['rock', 'paper', 'scissors'];
+    const availableChoices = ['rock', 'paper', 'scissors'];
     // when the input does not match, keep asking
     while (!(availableChoices.includes(playerChoice.toLowerCase()))) {
         playerChoice = prompt("Rock? Paper? or Scissors?");
@@ -17,19 +17,18 @@ function getPlayerChoice(){
 
 // Play a single round
 function playRound(playerSelection, computerSelection) {
-    let wins = ['paperrock', 'rockscissors', 'scissorspaper'];
-    // let losses = ['paperscissors','scissorsrock', 'rockpaper'];
-    let player = playerSelection.toLowerCase() ;
-    let computer = computerSelection.toLowerCase();
-    if(player == computer){
+    const wins = ['paperrock', 'rockscissors', 'scissorspaper'];
+    let playerPlay = playerSelection.toLowerCase() ;
+    let computerPlay = computerSelection.toLowerCase();
+    if(playerPlay == computerPlay){
         // a draw
       return `It is a draw: ${playerSelection.toUpperCase()} and ${computerSelection.toUpperCase()}`;
-    } else if (wins.includes(player+computer) ) {
+    } else if (wins.includes(playerPlay+computerPlay) ) {
         // player wins
-        return `You win! ${player.toUpperCase()} beats ${computer.toUpperCase()}`;
+        return `You win! ${playerPlay.toUpperCase()} beats ${computerPlay.toUpperCase()}`;
        } else {
         // player looses
-        return `You loose! ${computer.toUpperCase()} beats ${player.toUpperCase()}`;
+        return `You loose! ${computerPlay.toUpperCase()} beats ${playerPlay.toUpperCase()}`;
        }
     };
 
