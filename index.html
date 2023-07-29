@@ -1,26 +1,52 @@
 <!DOCTYPE html>
 <html>
+
+
   <head>
     <meta charset="utf-8">
     <title>Rock paper scissors</title>
-    <script src="rps.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="rps-with-ui.js" defer></script>
   </head>
-  <body>
-    <div class="scores">
-        <div class="you">
-            <p>You</p>
-            <p>0</p>
+
+
+  <body class="body">
+
+    <div class="rpsTitle">
+        <h1>Rock - Paper - Scissors</h1>
+    </div>
+
+    <div class="players">
+        <div class="player" id="you">
+            <div>   You   </div>
+            <div class="score">0</div>
+            <div id="myChoice"> ? </div>
         </div>
-        <div class="computer">
-            <p>Computer</p>
-            <p>0</p>
+        <div class="player" id="computer">
+            <div>Computer</div>
+            <div class="score">0</div>
+            <div id ="computerChoice"> ? </div>
         </div>
     </div>
-    <div class="buttons">
-        <button class="button"> Rock </button>
-        <button class="button"> Paper </button>
-        <button class="button"> scissors </button>
-        </div>
+
+    <div id="buttons">
+        <!-- <input type="radio" name="playerchoice" value="rock" id="rock">
+        <label for="rock">Rock</label>
+        <input type="radio" name="playerchoice" value="paper" id="paper">
+        <label for="paper">Paper</label>
+        <input type="radio" name="playerchoice" value="scissors" id="scissors">
+        <label for="scissors">Scissors</label> -->
+        <button class="button" value="rock"> Rock </button>
+        <button class="button" value="paper"> Paper </button>
+        <button class="button" value="scissors"> Scissors </button>
     </div>
+
+    <div class="playbutton">
+      <p>How many rounds? <input type="number" min="1" value="4"/> </p>
+      <button >PLAY</button> <button >REPLAY</button>
+    </div>
+
   </body>
+
+
 </html>
