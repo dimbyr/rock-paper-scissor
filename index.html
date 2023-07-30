@@ -13,37 +13,32 @@
   <body class="body">
 
     <div class="rpsTitle">
-        <h1>Rock - Paper - Scissors</h1>
+        <h1>Wanna play Rock - Paper - Scissors?</h1>
     </div>
 
     <div class="players">
         <div class="player" id="you">
             <div>   You   </div>
-            <div class="score">0</div>
-            <div id="myChoice"> ? </div>
+            <div class="score" id="pScore">0</div>
+            <div id="myChoice">  </div>
         </div>
         <div class="player" id="computer">
             <div>Computer</div>
-            <div class="score">0</div>
-            <div id ="computerChoice"> ? </div>
+            <div class="score" id="cScore">0</div>
+            <div id ="computerChoice">  </div>
         </div>
     </div>
 
     <div id="buttons">
-        <!-- <input type="radio" name="playerchoice" value="rock" id="rock">
-        <label for="rock">Rock</label>
-        <input type="radio" name="playerchoice" value="paper" id="paper">
-        <label for="paper">Paper</label>
-        <input type="radio" name="playerchoice" value="scissors" id="scissors">
-        <label for="scissors">Scissors</label> -->
-        <button class="button" value="rock"> Rock </button>
-        <button class="button" value="paper"> Paper </button>
+        <button  class="button" value="rock"> Rock </button>
+        <button  class="button" value="paper"> Paper </button>
         <button class="button" value="scissors"> Scissors </button>
     </div>
 
     <div class="playbutton">
-      <p>How many rounds? <input type="number" min="1" value="4"/> </p>
-      <button >PLAY</button> <button >REPLAY</button>
+      <!-- <p>How many rounds? <input type="number" min="1" value="4"/> </p>
+      <button >PLAY</button>  -->
+      <button id = 'resetbutton'>Reset</button>
     </div>
 
   </body>
